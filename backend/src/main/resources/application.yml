@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: laptop-lens-backend
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/laptop_lens
+server:
+  port: 8080
+

@@ -1,18 +1,18 @@
+import { Link } from "react-router-dom";
+
 const SignIn = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#eaeaea]">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
 
-        {/* Title */}
         <h1 className="text-4xl font-bold text-center text-[#33363b]">
           Welcome Back
         </h1>
 
         <p className="text-center text-gray-500 mt-2 mb-8">
-          Enter your credentials to connect you account
+          Enter your credentials to connect your account
         </p>
 
-        {/* Email */}
         <div className="mb-5">
           <label className="block text-sm font-medium text-[#33363b] mb-2">
             Email
@@ -24,7 +24,6 @@ const SignIn = () => {
           />
         </div>
 
-        {/* Password */}
         <div className="mb-5">
           <label className="block text-sm font-medium text-[#33363b] mb-2">
             Password
@@ -36,7 +35,6 @@ const SignIn = () => {
           />
         </div>
 
-        {/* Options */}
         <div className="flex justify-between items-center text-sm mb-6">
           <label className="flex items-center text-[#33363b]">
             <input type="checkbox" className="mr-2 accent-[#33363b]" />
@@ -47,30 +45,30 @@ const SignIn = () => {
           </span>
         </div>
 
-        {/* Sign In Button */}
         <button className="w-full bg-[#33363b] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300">
           Sign In
         </button>
 
-        {/* Divider */}
         <div className="flex items-center my-6">
           <div className="flex-grow border-t border-gray-300"></div>
           <span className="mx-4 text-gray-400 text-sm">OR</span>
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        {/* Google Button */}
         <button className="w-full border border-gray-300 py-3 rounded-lg text-[#33363b] hover:bg-gray-100 transition duration-300">
           Sign in with Google
         </button>
 
-        {/* Signup */}
         <p className="text-center text-sm text-gray-600 mt-8">
           Don’t have an account?{" "}
-          <span className="text-[#33363b] font-medium cursor-pointer hover:underline">
+          <Link
+            to="/register"
+            className="text-[#33363b] font-medium hover:underline"
+          >
             Sign Up
-          </span>
+          </Link>
         </p>
+
       </div>
     </div>
   );
